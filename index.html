@@ -23,22 +23,34 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/>
 
     <!-- ==== Bootstrap And Other Styles ==== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/> -->
     <link rel="stylesheet" href="css/magnific-popup.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/media.css"/>
 
     <!-- ==== Main Styles ==== -->
     <link rel="stylesheet" href="css/style.css"/>
+    <!-- <link rel="stylesheet" href="css/nav.css"> -->
     <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/nav.css">
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 </head>
+
+<div id="loaderr">
+    <canvas id="canvas"></canvas>
+    <h2 id="loading-galaxy">Loading</h2>
+</div>
+
 <body>
+ 
+
 <!-- ==== Preloader Section Start ==== -->
 <!-- <div id="loader">
 			<span id="loaderInner">
@@ -46,7 +58,10 @@
 			</span>
     <span class="loader-text">Loading...</span>
 </div> -->
-<div id="loader">
+
+
+
+<!-- <div id="loader">
     <div class="background background0"></div>
 <div class="background background1"></div>
 <div class="background background2"></div>
@@ -176,7 +191,7 @@
   <div class="particle particle710"></div>
   <div class="particle particle711"></div>
 </div>
-</div>
+</div> -->
 
 
 <!-- ==== Preloader Section End ==== -->
@@ -184,57 +199,85 @@
 
 <!-- ==== Header Section Start ==== -->
 <header class="header-area particles wow pulse" data-wow-duration="1s" id="home">
-    
-    <nav class="navbar main-menu"><!-- Navbar Start -->
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-transparent" color-on-scroll="500">
         <div class="container">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar"></span>
+                    <span class="navbar-toggler-bar"></span>
+                    <span class="navbar-toggler-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="#">
-                    <img src="img/site-logo.png" class="img-responsive" ><!-- Site Logo -->
-                </a>
+                <a class="navbar-brand" href="#">Minh Phan</a>
             </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav  navbar-right">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#review">Quotes</a></li>
-                    <!--<li><a href="#blog">Blog</a></li>-->
-                    <li><a href="#contact">Contact</a></li>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://www.linkedin.com/in/minhpn08/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                            <p class="hidden-lg-up">Linkedin</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/Nhatminh8121999/" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="hidden-lg-up">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/nhatminh_p/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                            <p class="hidden-lg-up">Instagram</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/minhpnz" target="_blank">
+                            <i class="fa fa-github"></i>
+                            <p class="hidden-lg-up">GitHub</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+						<a href="#" target="_blank" class="btn btn-danger btn-round">Login</a>
+					</li>
                 </ul>
             </div>
         </div>
-    </nav><!-- Navbar End -->
+    </nav>
+    <div class="wrapper">
+        <div class="page-header section-dark" style="background-image: url('img/cl1.jpeg')">
+            <div class="filter"></div>
+    		<div class="content-center">
+    			<div class="container">
+    				<div class="title-brand wow fadeIn" data-wow-delay="1s">
+    					<!-- <div class="dtable wow fadeInUp" data-wow-delay="1s"> -->
+                          
+                                
+                                    <div class="profile-pic">
+                                      
+                                        <img src="img/avatar.jpeg" alt=""/><!-- Profile Avatar -->
+                                    </div>
+                                    <div class="intro-div">
+                                        <div class="type-wrap">
+                                            <div id="typed-strings"><!-- Type words -->
+                                                <p>Phan Nhat Minh</p>
+                                                <p>a Devops Engineer</p>
+                                               
+                                            </div>
+                                            <h1>Hi I'm <b id="typed"></b>.</h1>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+                        
+    				<!-- </div> -->
 
+    				<!-- <h2 class="presentation-subtitle text-center">animation bro</h2> -->
+    			</div>
+    		</div>
+            <div class="moving-clouds" style="background-image: url('img/clouds.png'); ">
 
-    <div class="dtable wow fadeInUp" data-wow-delay="1s">
-        <div class="dtable-cell">
-            <div class="container">
-                <div class="profile-pic">
-                    <img src="img/avatar.jpeg" alt=""/><!-- Profile Avatar -->
-                </div>
-                <div class="intro-div">
-                    <div class="type-wrap">
-                        <div id="typed-strings"><!-- Type words -->
-                            <p>Phan Nhat Minh</p>
-                            <p>a Devops Engineer</p>
-                           
-                        </div>
-                        <h1>Hi I'm <b id="typed"></b>.</h1>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
+    	</div>
+  </div>
 
 </header>
 <!-- ==== Header Section End ==== -->
@@ -771,45 +814,7 @@
 
 
 <!-- ==== Review Section Start ==== -->
-<section class="review-area spad wow fadeInUp" data-wow-duration="1s" id="review">
-    <div class="review-bg"></div>
-    <div class="container">
-        <div class="review-icon">
-            <i class="fa fa-quote-left"></i>
-        </div>
-        <!-- Review Slider Start -->
-        <div class="col-md-offset-2 col-md-8 review-carousel carousel slide" data-ride="carousel">
 
-            <div class="carousel-inner" role="listbox">
-
-                <div class="review-single item active">
-                    <p>Two things are infinite: the universe and human stupidity; and I'm not sure about the
-                        universe.</p>
-                    <h3>Albert Einstein</h3>
-                    <!--<h4>Soft-IT LLC</h4>-->
-                </div>
-
-                <div class="review-single item">
-                    <p>Without music, life would be a mistake.</p>
-                    <h3>Friedrich Nietzsche, Twilight of the Idols</h3>
-                    <!--<h4>Micro-IT</h4>-->
-                </div>
-
-            </div>
-
-            <div class="review-controller"><!-- Slider Conteoller -->
-                <a href=".review-carousel" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href=".review-carousel" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-
-        </div>
-        <!-- Review Slider End -->
-    </div>
-</section>
 <!-- ==== Review Section End ==== -->
 
 
@@ -954,5 +959,9 @@
 <script src="js/plugins.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/welcome.js"></script>
+<script src="js/nav.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 </body>
 </html>

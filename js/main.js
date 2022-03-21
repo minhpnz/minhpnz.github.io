@@ -5,8 +5,8 @@ new WOW().init();
 
 	//======= SITE LOADER ========//
     $(window).on('load',function() { 
-	    $("#loaderInner").fadeOut(); 
-	    $("#loader").delay(10000).fadeOut("slow"); 
+	    $("#loaderr").delay(1000).fadeOut(); 
+	    // $("#loaderr").delay(1000).fadeOut("slow"); 
 	});    
 
 
@@ -149,3 +149,7 @@ new WOW().init();
     });
 	
 })(jQuery); //end
+
+
+
+

@@ -126,7 +126,7 @@ img{
     height: 100%;
     left: 0;
     top: 0;
-    background: white;
+    background: #333;
     z-index: 99999;
 }
 .loader-text{
@@ -145,7 +145,7 @@ img{
     top: 50%;
     margin-top: -20px;
     position: relative;
-    border: 6px solid #fbe1bf;
+    border: 6px solid #00BFA5;
     animation: loader 2.3s infinite ease;
         -webkit-animation: loader 2.3s infinite ease;
 }
@@ -154,7 +154,7 @@ img{
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: #fbe1bf;
+    background-color: #00BFA5;
     animation: loader-inner 2.3s infinite ease-in;
         -webkit-animation: loader-inner 2.3s infinite ease-in;
 }
@@ -330,7 +330,7 @@ img{
     0401. . Header 
 ====================================== */
 .spinner-loading {
-	border: 10px solid #eee;
+	border: 10px solid #fbe1bf;
 	border-right-color: transparent;
 	border-radius: 50%;
 	width: 250px;
