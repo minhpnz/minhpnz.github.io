@@ -7672,7 +7672,10 @@
   .nc-zoom-split::before {
       content: "\ea64";
   }
-  
+  .navbar-fixed-top{
+    background-color: rgb(0 0 0 / 80%) !important;
+    transition: background-color 200ms linear;
+  }
   
   /* all icon font classes list here */
   

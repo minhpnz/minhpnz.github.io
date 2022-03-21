@@ -5,7 +5,7 @@ new WOW().init();
 
 	//======= SITE LOADER ========//
     $(window).on('load',function() { 
-	    $("#loaderr").delay(1000).fadeOut(); 
+	    $("#loaderr").delay(10000).fadeOut(); 
 	    // $("#loaderr").delay(1000).fadeOut("slow"); 
 	});    
 
@@ -13,9 +13,12 @@ new WOW().init();
 	//======= STICK HEADER ========//
 	$(window).on('scroll', function() {
         if ($(window).scrollTop() >= 75) {
-            $("body").addClass("fixed-header");
+            $("nav").addClass("navbar-fixed-top");
+			$("body").addClass("fixed-header");
+			
         }
         else {
+			$("nav").removeClass("navbar-fixed-top");
             return $("body").removeClass("fixed-header");
         }
     });
