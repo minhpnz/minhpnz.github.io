@@ -1,0 +1,155 @@
+/************************************************************
+
+Fichier : style.scss
+Theme name : neon button
+Description: Original tuto by Online Tutorials -> https://youtu.be/ex7jGbyFgpA
+Author: Shay Reichert
+
+
+
+/************************************************
+0.	Import
+************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+$button-color: #00fff6;
+$second-color: #050f1a;
+
+
+
+/************************************************
+1.	BODY
+************************************************/
+// body {
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     min-height: 100vh;
+//     background-color: #050f1a;
+//     font-family: "Questrial", Impact, sans-serif;
+// }
+
+
+/************************************************
+2.	LIEN et BOUTON
+************************************************/
+
+.welcomeButtons{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // user-select: none;
+    transform: translate(-50%,-50%);
+    // color: rgba(255,255,255,.68);
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: $button-color;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+    &:visited {
+        color: $button-color;
+    }
+    &:hover {
+        color: #050f1a;
+        background: $button-color;
+        border-radius: 3px;
+        box-shadow: 0 0 10px $button-color, 0 0 40px $button-color, 0 0 80px $button-color;
+        transition-delay: 600ms;
+    }
+
+
+    span {
+        position: absolute;
+        display: block;
+    }
+}
+
+
+
+
+
+/************************************************
+3.	NEON DU HAUT
+************************************************/
+
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $button-color);
+}
+a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 600ms;
+}
+
+
+
+
+/************************************************
+4.	NEON DU BAS
+************************************************/
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, $button-color);
+}
+a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 250ms;
+}
+
+
+
+/************************************************
+5.	NEON DE DROITE
+************************************************/
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $button-color);
+}
+a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 100ms;
+}
+
+
+
+/************************************************
+5.	NEON DE GAUCHE
+************************************************/
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, $button-color);
+}
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 450ms;
+}

@@ -1,0 +1,139 @@
+/************************************************************
+
+Fichier : style.scss
+Theme name : neon button
+Description: Original tuto by Online Tutorials -> https://youtu.be/ex7jGbyFgpA
+Author: Shay Reichert
+
+
+
+/************************************************
+0.	Import
+************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+/************************************************
+1.	BODY
+************************************************/
+/************************************************
+2.	LIEN et BOUTON
+************************************************/
+.welcomeButtons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #00fff6;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 30px;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a:visited {
+  color: #00fff6;
+}
+
+a:hover {
+  color: #050f1a;
+  background: #00fff6;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px #00fff6, 0 0 40px #00fff6, 0 0 80px #00fff6;
+          box-shadow: 0 0 10px #00fff6, 0 0 40px #00fff6, 0 0 80px #00fff6;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+/************************************************
+3.	NEON DU HAUT
+************************************************/
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#00fff6));
+  background: linear-gradient(90deg, transparent, #00fff6);
+}
+
+a:hover span:nth-child(1) {
+  left: 100%;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+/************************************************
+4.	NEON DU BAS
+************************************************/
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#00fff6));
+  background: linear-gradient(270deg, transparent, #00fff6);
+}
+
+a:hover span:nth-child(3) {
+  right: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+/************************************************
+5.	NEON DE DROITE
+************************************************/
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#00fff6));
+  background: linear-gradient(180deg, transparent, #00fff6);
+}
+
+a:hover span:nth-child(2) {
+  top: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+/************************************************
+5.	NEON DE GAUCHE
+************************************************/
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#00fff6));
+  background: linear-gradient(360deg, transparent, #00fff6);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+/*# sourceMappingURL=welcomeButton.css.map */

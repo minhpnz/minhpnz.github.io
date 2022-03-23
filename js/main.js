@@ -3,12 +3,24 @@ new WOW().init();
 (function ($) {
     "use strict";
 
-	//======= SITE LOADER ========//
+	// //======= SITE LOADER ========//
     $(window).on('load',function() { 
-	    $("#loaderr").delay(10000).fadeOut(); 
+	    $("#loading-galaxy").fadeOut(); 
 	    // $("#loaderr").delay(1000).fadeOut("slow"); 
+		// $("#canvas").delay(1000).fadeOut();
+		$('#welcomeButtons').css("display","inline-block")
 	});    
-
+	// $('#canvas').on('load',function() { 
+	//     $("#loading-galaxy").delay(400).fadeOut(); 
+	//     // $("#loaderr").delay(1000).fadeOut("slow"); 
+	// 	// $("#canvas").delay(1000).fadeOut();
+	// 	console.log('222')
+	// 	$('#welcomeButtons').css("display","inline-block")
+	// });
+	$('#welcomeButtons').on("click", function (e) {
+        e.preventDefault();
+		$("#loaderr").fadeOut("slow"); 
+    });
 
 	//======= STICK HEADER ========//
 	$(window).on('scroll', function() {
@@ -103,6 +115,8 @@ new WOW().init();
 		});
 	});
 	
+
+
 
 
 	//======= Contact Form ========//
