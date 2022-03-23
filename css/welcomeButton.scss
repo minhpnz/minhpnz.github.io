@@ -47,7 +47,7 @@ $second-color: #050f1a;
     // color: rgba(255,255,255,.68);
 }
 
-a {
+a.welcomeButtonA {
     position: relative;
     display: inline-block;
     padding: 15px 30px;
@@ -84,7 +84,7 @@ a {
 3.	NEON DU HAUT
 ************************************************/
 
-a span:nth-child(1) {
+a.welcomeButtonA span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -103,14 +103,14 @@ a:hover span:nth-child(1) {
 4.	NEON DU BAS
 ************************************************/
 
-a span:nth-child(3) {
+a.welcomeButtonA span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg, transparent, $button-color);
 }
-a:hover span:nth-child(3) {
+a.welcomeButtonA:hover span:nth-child(3) {
     right: 100%;
     transition: 1s;
     transition-delay: 250ms;
@@ -122,14 +122,14 @@ a:hover span:nth-child(3) {
 5.	NEON DE DROITE
 ************************************************/
 
-a span:nth-child(2) {
+a.welcomeButtonA span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent, $button-color);
 }
-a:hover span:nth-child(2) {
+a.welcomeButtonA:hover span:nth-child(2) {
     top: 100%;
     transition: 1s;
     transition-delay: 100ms;
@@ -141,14 +141,14 @@ a:hover span:nth-child(2) {
 5.	NEON DE GAUCHE
 ************************************************/
 
-a span:nth-child(4) {
+a.welcomeButtonA span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(360deg, transparent, $button-color);
 }
-a:hover span:nth-child(4) {
+a.welcomeButtonA:hover span:nth-child(4) {
     bottom: 100%;
     transition: 1s;
     transition-delay: 450ms;

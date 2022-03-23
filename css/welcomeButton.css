@@ -26,7 +26,7 @@ Author: Shay Reichert
           transform: translate(-50%, -50%);
 }
 
-a {
+a.welcomeButtonA {
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -40,11 +40,11 @@ a {
   transition: 0.2s;
 }
 
-a:visited {
+a.welcomeButtonA:visited {
   color: #00fff6;
 }
 
-a:hover {
+a.welcomeButtonA:hover {
   color: #050f1a;
   background: #00fff6;
   border-radius: 3px;
@@ -54,7 +54,7 @@ a:hover {
           transition-delay: 600ms;
 }
 
-a span {
+a.welcomeButtonA span {
   position: absolute;
   display: block;
 }
@@ -62,7 +62,7 @@ a span {
 /************************************************
 3.	NEON DU HAUT
 ************************************************/
-a span:nth-child(1) {
+a.welcomeButtonA span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -80,7 +80,7 @@ a:hover span:nth-child(1) {
 /************************************************
 4.	NEON DU BAS
 ************************************************/
-a span:nth-child(3) {
+a.welcomeButtonA span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -89,7 +89,7 @@ a span:nth-child(3) {
   background: linear-gradient(270deg, transparent, #00fff6);
 }
 
-a:hover span:nth-child(3) {
+a.welcomeButtonA:hover span:nth-child(3) {
   right: 100%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -100,7 +100,7 @@ a:hover span:nth-child(3) {
 /************************************************
 5.	NEON DE DROITE
 ************************************************/
-a span:nth-child(2) {
+a.welcomeButtonA span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -109,7 +109,7 @@ a span:nth-child(2) {
   background: linear-gradient(180deg, transparent, #00fff6);
 }
 
-a:hover span:nth-child(2) {
+a.welcomeButtonA:hover span:nth-child(2) {
   top: 100%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -120,7 +120,7 @@ a:hover span:nth-child(2) {
 /************************************************
 5.	NEON DE GAUCHE
 ************************************************/
-a span:nth-child(4) {
+a.welcomeButtonA span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -129,7 +129,7 @@ a span:nth-child(4) {
   background: linear-gradient(360deg, transparent, #00fff6);
 }
 
-a:hover span:nth-child(4) {
+a.welcomeButtonA:hover span:nth-child(4) {
   bottom: 100%;
   -webkit-transition: 1s;
   transition: 1s;
